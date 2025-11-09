@@ -1,1 +1,5 @@
-// Flows will be imported for their side effects in this file.
+import { config } from 'dotenv';
+config();
+
+import '@/ai/flows/recommend-products-for-pet.ts';
+import '@/ai/flows/tag-products-with-perfect-for.ts';

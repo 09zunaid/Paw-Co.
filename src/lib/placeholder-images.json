@@ -1,3 +1,202 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-dog-owner",
+      "description": "A smiling golden retriever dog playing with its owner in a sunny park.",
+      "imageUrl": "https://images.unsplash.com/photo-1534361960057-19889db9621e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZG9nJTIwcGFya3xlbnwwfHx8fDE3NjI2MjA1MDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dog park"
+    },
+    {
+      "id": "category-dog",
+      "description": "A happy dog catching a frisbee.",
+      "imageUrl": "https://images.unsplash.com/photo-1560160922-6019c26a2523?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkb2clMjBmcmlzYmVlfGVufDB8fHx8MTc2MjY3Nzc0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dog frisbee"
+    },
+    {
+      "id": "category-cat",
+      "description": "A curious cat peeking from behind a sofa.",
+      "imageUrl": "https://images.unsplash.com/photo-1759997724538-e75a36097585?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjYXQlMjBzb2ZhfGVufDB8fHx8MTc2MjY3Nzc0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cat sofa"
+    },
+    {
+      "id": "category-brands",
+      "description": "A collection of popular pet food brand bags.",
+      "imageUrl": "https://images.unsplash.com/photo-1676193866128-03a926df76ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXQlMjBmb29kfGVufDB8fHx8MTc2MjU5MjU4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pet food"
+    },
+    {
+      "id": "category-autoship",
+      "description": "A subscription box with pet supplies being delivered.",
+      "imageUrl": "https://images.unsplash.com/photo-1595246135406-803418233494?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdWJzY3JpcHRpb24lMjBib3h8ZW58MHx8fHwxNzYyNjc3NzQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "subscription box"
+    },
+    {
+      "id": "product-organic-kibble",
+      "description": "A bag of premium organic dog food.",
+      "imageUrl": "https://images.unsplash.com/photo-1608408891486-f5cade977d19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkb2clMjBmb29kfGVufDB8fHx8MTc2MjY1Nzg3OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dog food"
+    },
+    {
+      "id": "product-chew-toy",
+      "description": "A durable, colorful chew toy for dogs.",
+      "imageUrl": "https://images.unsplash.com/photo-1591946614720-90a587da4a36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkb2clMjB0b3l8ZW58MHx8fHwxNzYyNjc3NzQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dog toy"
+    },
+    {
+      "id": "product-leather-collar",
+      "description": "A stylish, comfortable leather pet collar.",
+      "imageUrl": "https://images.unsplash.com/photo-1682969651476-6fb48aba8b03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkb2clMjBjb2xsYXJ8ZW58MHx8fHwxNzYyNjc3NzQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dog collar"
+    },
+    {
+      "id": "product-cat-bed",
+      "description": "A cozy, plush cat bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1600369671608-7aad7dac5236?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2F0JTIwYmVkfGVufDB8fHx8MTc2MjY3Nzc0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cat bed"
+    },
+    {
+      "id": "shop-hero",
+      "description": "A happy golden retriever dog playing in a sunny field.",
+      "imageUrl": "https://images.unsplash.com/photo-1667992715164-510eabb82163?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkb2clMjBmaWVsZHxlbnwwfHx8fDE3NjI2Nzc3NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dog field"
+    },
+    {
+      "id": "shop-category-dogs",
+      "description": "A close-up shot of a happy dog with its tongue out.",
+      "imageUrl": "https://images.unsplash.com/photo-1597806999047-9456837df754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxoYXBweSUyMGRvZ3xlbnwwfHx8fDE3NjI2MjEwNzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy dog"
+    },
+    {
+      "id": "shop-category-cats",
+      "description": "A curious cat peeking from behind a piece of furniture.",
+      "imageUrl": "https://images.unsplash.com/photo-1727419818458-47fc09e56806?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y3VyaW91cyUyMGNhdHxlbnwwfHx8fDE3NjI2MjA1MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "curious cat"
+    },
+    {
+      "id": "shop-category-small-animals",
+      "description": "Two small guinea pigs eating a piece of lettuce.",
+      "imageUrl": "https://images.unsplash.com/photo-1602580184896-799eb5029eee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxndWluZWElMjBwaWdzfGVufDB8fHx8MTc2MjY3Nzc0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "guinea pigs"
+    },
+    {
+      "id": "shop-category-birds",
+      "description": "A colorful parrot perched on a branch.",
+      "imageUrl": "https://images.unsplash.com/photo-1589792351116-53074a88aabe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGFycm90fGVufDB8fHx8MTc2MjY3Nzc0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "parrot"
+    },
+    {
+      "id": "product-main-image",
+      "description": "Main image of Organic Chicken & Rice dog food bag",
+      "imageUrl": "https://images.unsplash.com/photo-1632236568054-12f36ecee2f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkb2clMjBmb29kfGVufDB8fHx8MTc2MjY1Nzg3N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dog food"
+    },
+    {
+      "id": "product-thumb-1",
+      "description": "Dog food kibble close-up",
+      "imageUrl": "https://images.unsplash.com/photo-1565674244283-993fb27a215f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkb2clMjBmb29kfGVufDB8fHx8MTc2MjY1Nzg3OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dog food"
+    },
+    {
+      "id": "product-thumb-2",
+      "description": "Packaging details of the dog food",
+      "imageUrl": "https://images.unsplash.com/photo-1595246135406-803418233494?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwYWNrYWdpbmd8ZW58MHx8fHwxNzYyNjc3NzQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "packaging"
+    },
+    {
+      "id": "product-thumb-3",
+      "description": "A happy dog eating the food from a bowl",
+      "imageUrl": "https://images.unsplash.com/photo-1534859563435-852a491d410c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZG9nJTIwZWF0aW5nfGVufDB8fHx8MTc2MjU3ODc3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dog eating"
+    },
+    {
+      "id": "related-product-1",
+      "description": "Grain-Free Salmon Recipe",
+      "imageUrl": "https://images.unsplash.com/photo-1633478062482-790e3b5dd810?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2FsbW9uJTIwZm9vZHxlbnwwfHx8fDE3NjI2Nzc3NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "salmon food"
+    },
+    {
+      "id": "related-product-2",
+      "description": "Durable Rubber Chew Toy",
+      "imageUrl": "https://images.unsplash.com/photo-1591946614720-90a587da4a36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkb2clMjB0b3l8ZW58MHx8fHwxNzYyNjc3NzQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dog toy"
+    },
+    {
+      "id": "related-product-3",
+      "description": "Cozy Orthopedic Pet Bed",
+      "imageUrl": "https://images.unsplash.com/photo-1581888475780-27b6b0bc3690?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXQlMjBiZWR8ZW58MHx8fHwxNzYyNjc3NzQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pet bed"
+    },
+    {
+      "id": "related-product-4",
+      "description": "All-Natural Dental Chews",
+      "imageUrl": "https://images.unsplash.com/photo-1677948855509-c12a2b67d304?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkZW50YWwlMjBjaGV3fGVufDB8fHx8MTc2MjYyNzY1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dental chew"
+    },
+    {
+      "id": "user-avatar",
+      "description": "User profile picture",
+      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjI1OTQ3NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "autoship-hero",
+      "description": "A happy golden retriever dog sitting next to a bowl of pet food in a bright, clean kitchen.",
+      "imageUrl": "https://images.unsplash.com/photo-1644311097562-25b2c3175f9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkb2clMjBraXRjaGVufGVufDB8fHx8MTc2MjY3Nzc0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dog kitchen"
+    },
+    {
+      "id": "autoship-manage",
+      "description": "A person's hand using a smartphone to manage their pet supply subscription online.",
+      "imageUrl": "https://images.unsplash.com/photo-1614881390162-81338e3ea216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxoYW5kJTIwc21hcnRwaG9uZXxlbnwwfHx8fDE3NjI2Nzc3NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hand smartphone"
+    },
+    {
+      "id": "blog-hero",
+      "description": "A happy golden retriever playing with its owner in a sunny park.",
+      "imageUrl": "https://images.unsplash.com/photo-1667230228326-c881966e2a29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkb2clMjBwYXJrfGVufDB8fHx8MTc2MjYyMDUwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dog park"
+    },
+    {
+      "id": "blog-puppy",
+      "description": "A small puppy sleeping in a cozy bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1649609152484-970b013af72a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzbGVlcGluZyUyMHB1cHB5fGVufDB8fHx8MTc2MjY3Nzc0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sleeping puppy"
+    },
+    {
+      "id": "blog-cat-toy",
+      "description": "A playful tabby cat chasing a feathered toy.",
+      "imageUrl": "https://images.unsplash.com/photo-1638826596253-45c356e832bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjYXQlMjBwbGF5aW5nfGVufDB8fHx8MTc2MjY0MjQ1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cat playing"
+    },
+    {
+      "id": "blog-dental",
+      "description": "A veterinarian checking a dog's teeth.",
+      "imageUrl": "https://images.unsplash.com/photo-1572290603512-cd1d7dad06e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx2ZXQlMjBkb2d8ZW58MHx8fHwxNzYyNjc3NzQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "vet dog"
+    },
+    {
+      "id": "blog-food-switch",
+      "description": "A bowl of high-quality dry dog food.",
+      "imageUrl": "https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkb2clMjBmb29kfGVufDB8fHx8MTc2MjY1Nzg3OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dog food"
+    },
+    {
+      "id": "blog-puppy-behavior",
+      "description": "A dog trainer teaching a puppy to sit.",
+      "imageUrl": "https://images.unsplash.com/photo-1620289052446-202137ffa876?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkb2clMjB0cmFpbmluZ3xlbnwwfHx8fDE3NjI2NjAzNzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dog training"
+    },
+    {
+      "id": "blog-cat-body-language",
+      "description": "Close up of a cat's paws on a soft blanket.",
+      "imageUrl": "https://images.unsplash.com/photo-1606425271394-c3ca9aa1fc06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXQlMjBwYXdzfGVufDB8fHx8MTc2MjY3Nzc0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cat paws"
+    },
+    {
+      "id": "pet-placeholder",
+      "description": "A generic cute pet",
+      "imageUrl": "https://images.unsplash.com/photo-1547565560-7d3313e7fff1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjdXRlJTIwcGV0fGVufDB8fHx8MTc2MjY3Nzc0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cute pet"
+    }
+  ]
 }
