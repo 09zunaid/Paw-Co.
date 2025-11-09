@@ -24,8 +24,8 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
+      <div className="container flex h-20 items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Icons.logo className="h-6 w-6 text-primary" />
@@ -33,14 +33,14 @@ export function Header() {
               Paw & Co.
             </span>
           </Link>
-          <nav className="flex items-center space-x-6 text-sm font-medium">
+          <nav className="flex items-center space-x-1 text-sm font-medium">
             {mainNav.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
                 className={cn(
-                  'transition-colors hover:text-primary',
-                  pathname === href ? 'text-primary' : 'text-foreground/60'
+                  'transition-colors hover:text-primary px-4 py-2 rounded-md',
+                  pathname === href ? 'text-primary bg-primary/10' : 'text-muted-foreground'
                 )}
               >
                 {label}
@@ -86,34 +86,35 @@ export function Header() {
           </SheetContent>
         </Sheet>
         
-        <Link href="/" className="flex items-center space-x-2 md:hidden">
-          <Icons.logo className="h-6 w-6 text-primary" />
-          <span className="font-bold font-headline text-lg">Paw & Co.</span>
-        </Link>
-
-        <div className="flex flex-1 items-center justify-end space-x-2">
-          <div className="w-full flex-1 md:w-auto md:flex-none">
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <Search className="h-5 w-5" />
-              <span className="sr-only">Search</span>
-            </Button>
-            <div className="relative hidden md:inline-block">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              <Input placeholder="Search..." className="pl-9" />
+        <div className="flex flex-1 items-center justify-between md:justify-end">
+             <Link href="/" className="flex items-center space-x-2 md:hidden">
+              <Icons.logo className="h-6 w-6 text-primary" />
+              <span className="font-bold font-headline text-lg">Paw & Co.</span>
+            </Link>
+            <div className="flex items-center gap-2">
+                <div className="relative hidden md:inline-block">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Input placeholder="Search..." className="pl-9 bg-secondary/50 border-0" />
+                </div>
+                <nav className="flex items-center">
+                    <Button asChild variant="ghost" size="icon" className="md:hidden">
+                        <Link href="#">
+                            <Search className="h-5 w-5" />
+                            <span className="sr-only">Search</span>
+                        </Link>
+                    </Button>
+                    <Button asChild variant="ghost" size="icon">
+                    <Link href="/account/my-pets">
+                        <User className="h-5 w-5" />
+                        <span className="sr-only">Account</span>
+                    </Link>
+                    </Button>
+                    <Button variant="ghost" size="icon">
+                    <ShoppingCart className="h-5 w-5" />
+                    <span className="sr-only">Cart</span>
+                    </Button>
+                </nav>
             </div>
-          </div>
-          <nav className="flex items-center">
-            <Button asChild variant="ghost" size="icon">
-              <Link href="/account/my-pets">
-                <User className="h-5 w-5" />
-                <span className="sr-only">Account</span>
-              </Link>
-            </Button>
-            <Button variant="ghost" size="icon">
-              <ShoppingCart className="h-5 w-5" />
-              <span className="sr-only">Cart</span>
-            </Button>
-          </nav>
         </div>
       </div>
     </header>
