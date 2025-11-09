@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Twitter, Facebook, Instagram } from 'lucide-react';
 
 export default function ContactPage() {
   return (
@@ -38,6 +38,20 @@ export default function ContactPage() {
                     <h3 className="font-bold">Our Location</h3>
                     <p className="text-muted-foreground">123 Puppy Lane<br/>Petville, PV 12345</p>
                 </div>
+            </div>
+            <div>
+              <h3 className="font-bold mb-2">Follow Us</h3>
+               <div className="flex space-x-4">
+                <a href="#" className="text-muted-foreground hover:text-primary">
+                  <Twitter className="h-6 w-6" />
+                </a>
+                <a href="#" className="text-muted-foreground hover:text-primary">
+                  <Facebook className="h-6 w-6" />
+                </a>
+                <a href="#" className="text-muted-foreground hover:text-primary">
+                  <Instagram className="h-6 w-6" />
+                </a>
+              </div>
             </div>
         </div>
         <div>
