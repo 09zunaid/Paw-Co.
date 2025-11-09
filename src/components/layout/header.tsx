@@ -7,7 +7,6 @@ import { useState } from 'react';
 
 import { Icons } from '@/components/icons';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 
@@ -16,6 +15,7 @@ const mainNav = [
   { href: '/auto-ship', label: 'Auto-Ship' },
   { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export function Header() {
@@ -24,9 +24,33 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-sm">
-      <div className="container flex h-20 items-center justify-between">
+      <div className="container flex h-16 items-center justify-between">
         
-        {/* Mobile Menu Trigger */}
+        {/* Desktop: Left side - Logo & Nav */}
+        <div className="hidden md:flex items-center gap-10">
+          <Link href="/" className="flex items-center gap-2">
+            <Icons.logo className="h-8 w-8 text-primary" />
+            <span className="font-bold text-xl font-headline">
+              Paw & Co.
+            </span>
+          </Link>
+          <nav className="flex items-center gap-1">
+            {mainNav.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={cn(
+                  'rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent/50 hover:text-primary',
+                  pathname === href ? 'text-primary font-semibold' : 'text-muted-foreground'
+                )}
+              >
+                {label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        {/* Mobile: Left side - Menu Trigger */}
         <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
           <SheetTrigger asChild>
             <Button
@@ -65,38 +89,14 @@ export function Header() {
           </SheetContent>
         </Sheet>
         
-        {/* Desktop Logo & Nav */}
-        <div className="hidden md:flex items-center gap-10">
-          <Link href="/" className="flex items-center gap-2">
-            <Icons.logo className="h-8 w-8 text-primary" />
-            <span className="font-bold text-xl font-headline">
-              Paw & Co.
-            </span>
-          </Link>
-          <nav className="flex items-center gap-6 text-sm">
-            {mainNav.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className={cn(
-                  'font-medium transition-colors hover:text-primary',
-                  pathname === href ? 'text-primary' : 'text-muted-foreground'
-                )}
-              >
-                {label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-
-        {/* Mobile-only Centered Logo */}
+        {/* Mobile: Center - Logo */}
         <div className="md:hidden absolute left-1/2 -translate-x-1/2">
              <Link href="/" className="flex items-center gap-2">
               <Icons.logo className="h-8 w-8 text-primary" />
             </Link>
         </div>
 
-        {/* Right-side Icons */}
+        {/* Right-side Icons (visible on all screen sizes) */}
         <div className="flex items-center gap-1">
           <Button asChild variant="ghost" size="icon">
             <Link href="#">
