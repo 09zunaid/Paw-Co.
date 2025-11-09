@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, Search, ShoppingCart, User, X } from 'lucide-react';
+import { Menu, Search, ShoppingCart, User } from 'lucide-react';
 import { useState } from 'react';
 
 import { Icons } from '@/components/icons';
@@ -12,7 +12,6 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 
 const mainNav = [
-  { href: '/', label: 'Home' },
   { href: '/shop', label: 'Shop' },
   { href: '/auto-ship', label: 'Auto-Ship' },
   { href: '/blog', label: 'Blog' },
@@ -24,23 +23,64 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
-      <div className="container flex h-20 items-center">
-        <div className="mr-4 hidden md:flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Icons.logo className="h-6 w-6 text-primary" />
-            <span className="hidden font-bold sm:inline-block font-headline text-lg">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-sm">
+      <div className="container flex h-20 items-center justify-between">
+        
+        {/* Mobile Menu Trigger */}
+        <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+          <SheetTrigger asChild>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden"
+            >
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">Toggle Menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="left" className="w-[300px] sm:w-[400px]">
+            <nav className="flex flex-col gap-4">
+              <Link
+                href="/"
+                className="mb-4 flex items-center gap-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Icons.logo className="h-8 w-8 text-primary" />
+                <span className="font-bold text-xl font-headline">Paw & Co.</span>
+              </Link>
+               {[...mainNav].map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={cn(
+                    "text-lg font-medium transition-colors hover:text-primary",
+                    pathname === href ? 'text-primary' : 'text-muted-foreground'
+                  )}
+                >
+                  {label}
+                </Link>
+              ))}
+            </nav>
+          </SheetContent>
+        </Sheet>
+        
+        {/* Desktop Logo & Nav */}
+        <div className="hidden md:flex items-center gap-10">
+          <Link href="/" className="flex items-center gap-2">
+            <Icons.logo className="h-8 w-8 text-primary" />
+            <span className="font-bold text-xl font-headline">
               Paw & Co.
             </span>
           </Link>
-          <nav className="flex items-center space-x-1 text-sm font-medium">
+          <nav className="flex items-center gap-6 text-sm">
             {mainNav.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
                 className={cn(
-                  'transition-colors hover:text-primary px-4 py-2 rounded-md',
-                  pathname === href ? 'text-primary bg-primary/10' : 'text-muted-foreground'
+                  'font-medium transition-colors hover:text-primary',
+                  pathname === href ? 'text-primary' : 'text-muted-foreground'
                 )}
               >
                 {label}
@@ -49,72 +89,33 @@ export function Header() {
           </nav>
         </div>
 
-        <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-          <SheetTrigger asChild>
-            <Button
-              variant="ghost"
-              className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
-            >
-              <Menu className="h-6 w-6" />
-              <span className="sr-only">Toggle Menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="left" className="pr-0">
-            <Link
-              href="/"
-              className="mb-4 flex items-center space-x-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <Icons.logo className="h-6 w-6 text-primary" />
-              <span className="font-bold font-headline text-lg">Paw & Co.</span>
+        {/* Mobile-only Centered Logo */}
+        <div className="md:hidden absolute left-1/2 -translate-x-1/2">
+             <Link href="/" className="flex items-center gap-2">
+              <Icons.logo className="h-8 w-8 text-primary" />
             </Link>
-            <div className="flex flex-col space-y-3">
-              {mainNav.map(({ href, label }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={cn(
-                    'transition-colors hover:text-primary p-2 rounded-md',
-                    pathname === href ? 'text-primary bg-primary/10' : 'text-muted-foreground'
-                  )}
-                >
-                  {label}
-                </Link>
-              ))}
-            </div>
-          </SheetContent>
-        </Sheet>
-        
-        <div className="flex flex-1 items-center justify-between md:justify-end">
-             <Link href="/" className="flex items-center space-x-2 md:hidden">
-              <Icons.logo className="h-6 w-6 text-primary" />
-              <span className="font-bold font-headline text-lg">Paw & Co.</span>
+        </div>
+
+        {/* Right-side Icons */}
+        <div className="flex items-center gap-1">
+          <Button asChild variant="ghost" size="icon">
+            <Link href="#">
+              <Search className="h-5 w-5" />
+              <span className="sr-only">Search</span>
             </Link>
-            <div className="flex items-center gap-2">
-                <div className="relative hidden md:inline-block">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                <Input placeholder="Search..." className="pl-9 bg-secondary/50 border-0" />
-                </div>
-                <nav className="flex items-center">
-                    <Button asChild variant="ghost" size="icon" className="md:hidden">
-                        <Link href="#">
-                            <Search className="h-5 w-5" />
-                            <span className="sr-only">Search</span>
-                        </Link>
-                    </Button>
-                    <Button asChild variant="ghost" size="icon">
-                    <Link href="/account/my-pets">
-                        <User className="h-5 w-5" />
-                        <span className="sr-only">Account</span>
-                    </Link>
-                    </Button>
-                    <Button variant="ghost" size="icon">
-                    <ShoppingCart className="h-5 w-5" />
-                    <span className="sr-only">Cart</span>
-                    </Button>
-                </nav>
-            </div>
+          </Button>
+          <Button asChild variant="ghost" size="icon">
+            <Link href="/account/my-pets">
+              <User className="h-5 w-5" />
+              <span className="sr-only">Account</span>
+            </Link>
+          </Button>
+          <Button asChild variant="ghost" size="icon">
+            <Link href="#">
+                <ShoppingCart className="h-5 w-5" />
+                <span className="sr-only">Cart</span>
+            </Link>
+          </Button>
         </div>
       </div>
     </header>
